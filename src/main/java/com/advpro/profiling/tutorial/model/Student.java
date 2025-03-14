@@ -6,7 +6,6 @@ import jakarta.persistence.*;
  * @author muhammad.khadafi
  */
 
-
 @Entity
 @Table(name = "students")
 public class Student {

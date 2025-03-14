@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
  */
 @Service
 public class DataSeedService {
-
     @Autowired
     private StudentRepository studentRepository;
     @Autowired
@@ -40,7 +39,6 @@ public class DataSeedService {
             student.setName(faker.name().fullName());
             student.setFaculty(faker.educator().course());
             student.setGpa(faker.number().randomDouble(2, 2, 4));
-
             studentRepository.save(student);
         }
     }
@@ -52,7 +50,6 @@ public class DataSeedService {
             course.setCourseCode(faker.code().ean8());
             course.setName(faker.book().title());
             course.setDescription(faker.lorem().sentence());
-
             courseRepository.save(course);
         }
     }
@@ -73,7 +70,5 @@ public class DataSeedService {
                 studentCourseRepository.save(studentCourse);
             }
         }
-
     }
-
 }
